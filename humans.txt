@@ -1,0 +1,15 @@
+/* TEAM */
+
+	Developer: Daniel Martinez
+	email: martinezcasabuena[at]gmail.com
+	From:Ontinyent, Valencia, Spain
+
+/* THANKS */
+
+		
+
+/* SITE */
+	Last update:2017/10/24
+	Language: English / Castellano
+	Doctype:HTML5
+	IDE: Sublime Text, Visual Studio Code 
