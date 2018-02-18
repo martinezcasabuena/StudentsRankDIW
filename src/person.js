@@ -4,7 +4,7 @@
  * @constructor
  * @param {string} name - Person name
  * @param {string} surname - Person surname
- * @param {array} attitudeTasks - Person awarded AttitudeTasks array   
+ * @param {array} attitudeTasks - Person awarded AttitudeTasks array
  * @param {array} gradedTasks - Person gradedTasks array
  * @tutorial pointing-criteria
  */
@@ -59,11 +59,11 @@ class Person {
   }
 
   /** Renders HTML person view Create a table row (tr) with
-   *  all name, attitudePoints , add button and one input for 
+   *  all name, attitudePoints , add button and one input for
    * every gradded task binded for that person. */
   getHTMLView() {
-    let liEl = document.createElement('tr');
-
+    let liEl = document.createElement('div');
+    liEl.className = "rankingTableRow";
     let esEL = getElementTd(this.surname + ', ' + this.name);
     esEL.addEventListener('click', () => {
       loadTemplate('templates/detailStudent.html',function(responseText) {
@@ -87,7 +87,8 @@ class Person {
     liEl.appendChild(getElementTd(this[_totalPoints]));
 
     let addAttitudeTaskEl = document.createElement('button');
-    addAttitudeTaskEl.className='button_attitude';    
+    addAttitudeTaskEl.setAttribute('aria-pressed', false);
+    addAttitudeTaskEl.className='button_attitude';
     let tb = document.createTextNode('+XP');
     addAttitudeTaskEl.appendChild(tb);
 

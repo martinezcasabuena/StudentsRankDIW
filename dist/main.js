@@ -104,6 +104,10 @@ var Context = function () {
     value: function initMenu() {
       var _this = this;
 
+      var btnHome = document.getElementById('btnHome');
+      btnHome.addEventListener('click', function () {
+        _this.getTemplateRanking();
+      });
       var addTask = document.getElementById('addGradedTask');
       addTask.addEventListener('click', function () {
         _this.addGradedTask();
@@ -128,12 +132,13 @@ var Context = function () {
         localStorage.setItem('students', JSON.stringify(this.students));
         var GRADED_TASKS = '';
         this.gradedTasks.forEach(function (taskItem) {
-          GRADED_TASKS += '<td>' + taskItem.name + '</td>';
+          GRADED_TASKS += '<div class="rankingTableRow rankingTableItem">' + taskItem.name + '</div>';
         });
 
         (0, _utils.loadTemplate)('templates/rankingList.html', function (responseText) {
           document.getElementById('content').innerHTML = eval('`' + responseText + '`');
           var tableBody = document.getElementById('idTableRankingBody');
+
           this.students.forEach(function (studentItem) {
             var liEl = studentItem.getHTMLView();
             tableBody.appendChild(liEl);
@@ -277,7 +282,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       * @constructor
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       * @param {string} name - Person name
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       * @param {string} surname - Person surname
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * @param {array} attitudeTasks - Person awarded AttitudeTasks array   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * @param {array} attitudeTasks - Person awarded AttitudeTasks array
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       * @param {array} gradedTasks - Person gradedTasks array
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       * @tutorial pointing-criteria
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       */
@@ -355,7 +360,7 @@ var Person = function () {
     }
 
     /** Renders HTML person view Create a table row (tr) with
-     *  all name, attitudePoints , add button and one input for 
+     *  all name, attitudePoints , add button and one input for
      * every gradded task binded for that person. */
 
   }, {
@@ -363,8 +368,8 @@ var Person = function () {
     value: function getHTMLView() {
       var _this = this;
 
-      var liEl = document.createElement('tr');
-
+      var liEl = document.createElement('div');
+      liEl.className = "rankingTableRow";
       var esEL = (0, _utils.getElementTd)(this.surname + ', ' + this.name);
       esEL.addEventListener('click', function () {
         (0, _utils.loadTemplate)('templates/detailStudent.html', function (responseText) {
@@ -386,6 +391,7 @@ var Person = function () {
       liEl.appendChild((0, _utils.getElementTd)(this[_totalPoints]));
 
       var addAttitudeTaskEl = document.createElement('button');
+      addAttitudeTaskEl.setAttribute('aria-pressed', false);
       addAttitudeTaskEl.className = 'button_attitude';
       var tb = document.createTextNode('+XP');
       addAttitudeTaskEl.appendChild(tb);
@@ -483,7 +489,8 @@ function hashcode(str) {
 
 /** Pass a text or an element ang get a td table element wrapping it. */
 function getElementTd(text) {
-  var tdEl = document.createElement('td');
+  var tdEl = document.createElement('div');
+  tdEl.className = "rankingTableRow rankingTableItem";
   var t = text;
   if (typeof text === 'string' || typeof text === 'number') {
     t = document.createTextNode(text); // Create a text node

@@ -1,30 +1,38 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
   <head>
+    <title>Students Rank</title>
     <link rel="stylesheet" href="style.css">
     <link type="text/plain" rel="author" href="humans.txt" />
     <script src="dist/main.js" ></script>
   </head>
-
-  <body align="center">
-    	<header><a href="">
-        <h1 id="RankingTittle">Ranking list</h1></a>&nbsp;
-        <button class="button_menu" id="addStudent">Add student</button>
-        <button class="button_menu" id="addGradedTask">Add graded task</button>
-        <br><br><br>
-      </header>
-      <div id="content" align="center">
-
+  <body role="body">
+    <div class="grid-container" role="grid">
+      <div class="itemHeader" role="banner">
+        <br>
+        <img src="http://s6.static-footeo.com/uploads/stadechevillonnais/Medias/podium.png" width="120px" height="120px"></img>
       </div>
-      <div id ="notify" style="position:absolute;bottom:0">Notification area</div>
 
-      <footer>
-        <p>Project developed in 2DAW</p>
-        <p>Contact information: <a href="mailto:example@example.com">example@example.com</a>.</p>
-        <a href="/humans.txt"><img src="http://humanstxt.org/img/oficial-logos/humanstxt-isolated-blank.gif" id="hrefHumans" alt="Humans.txt" width="88" height="31"></a>
-      </footer>
+      <div class="itemNav" role="nav">
+        <div aria-pressed="false" class="button_menu" role="button" title="Home" id="btnHome">
+          <a href="" class>Home</a>
+        </div>
+        <div aria-pressed="false" class="button_menu" role="button" title="Add a new student" id="addStudent">Add student</div>
+        <div aria-pressed="false" class="button_menu" role="button" title="Add a new graded task" id="addGradedTask">Add graded task</div>
+      </div>
 
+      <div class="itemLeft"></div>
+      <div class="itemMid" id="content" role="main" ></div>
+
+      <div class="itemNotification" role="notification-area">
+        <div id="notify">Notification area</div>
+      </div>
+      <div class="itemFooter" role="footer">
+        <p role="infoText">Project developed in 2DAW</p>
+        <p role="infoText">Contact information: <a href="mailto:example@example.com">example@example.com</a>.</p>
+        <a href="/humans.txt"><img src="http://humanstxt.org/img/oficial-logos/humanstxt-isolated-blank.gif" alt="Humans.txt" width="88" height="31"></a>
+      </div>
+    </div>
+    <div>
   </body>
-
 </html>

@@ -1,24 +1,30 @@
 /* Styles go here */
 
-
 body {
-
     background-color: lightblue !important;
-}
+  }
 
+  .itemNav {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0 auto;
+  }
 
 .button_menu{
-    text-decoration: none;
-    padding: 10px;
     font-size: 15px !important;
-    color: #ffffff;
-    background-color: teal;
-    border-radius: 6px;
-    border: 1px solid;
-    text-shadow: 4px 4px 2px black;
-    box-shadow: 5px 5px grey;
-    margin: 5px;
+    text-align: center;
+    color: grey;
+    display: block;
+    background-color: white;
+    flex-flow: row nowrap;
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 0.5em;
+    height: 2.3em;
+    margin: auto 0.3em;
   }
+
 
 .button_menu:hover{
     color: teal;
@@ -71,16 +77,68 @@ form {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
+    margin: 0 auto;
 }
 
-#idTableRankingBody{
-    /* border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-spacing: 10px 2px; */
+/*Table Style */
+.rankingTable {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  /* border:1px solid black; */
+  font-size: 1rem;
+  margin: 0.5rem;
+  line-height: 1.5;
+  width: 61%;
+  /* margin: 0 auto; */
+}
+.rankingTableHeader {
 
-    border: 1px solid #ccc;
+}
 
+.rankingTableRow {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.rankingTableItem {
+  display: flex;
+  flex-flow: row nowrap;
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 0.5em;
+}
+
+/*Page grid style */
+.itemHeader { grid-area: header; }
+.itemNav { grid-area: nav; }
+.itemLeft { grid-area: rankingLeft; }
+.itemMid { grid-area: main; }
+.itemNotification { grid-area: notification; }
+.itemFooter { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header nav nav nav nav'
+    'rankingLeft main main main main'
+    'notification notification notification notification notification'
+    'footer footer footer footer footer';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 0.5%;
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 0.5% 0;
+  /* font-size: 30px; */
+}
+
+.content {
+  margin: 0 auto;
+  padding-bottom: 2%;
 }
 
 textarea {
@@ -93,7 +151,7 @@ textarea {
     box-sizing: border-box;
 }
 
-a:link{ color: red } /* visited links */
+a:link{ color: #0f0753 } /* visited links */
 a:visited { color: blue } /* visited links */
 a:active { color: black } /* active links */
 
@@ -101,16 +159,15 @@ h1 {
  text-shadow: 1px 1px 0px white, 2px 2px 0px grey;
 }
 
-footer{
+/* footer{
   margin-left: 20%;
   padding: 4px;
-  /* border: 1px solid black; */
   background-color: teal;
   background-clip:border-box;
   position:fixed;
   bottom:0;
   width: 60%;
-}
+} */
 
 header{
   margin-left: 20%;
@@ -121,6 +178,7 @@ header{
   background-size: 100% auto;
 }
 
+
 /* #hrefHumans{
   -moz-transform: rotate(23deg);
   -webkit-transform: rotate(23deg);
@@ -128,7 +186,7 @@ header{
   transform: rotate(23deg);
 } */
 
-#addStudent{
+/* #addStudent{
   -moz-transform: rotate(-5deg);
   -webkit-transform: rotate(-5deg);
   -o-transform: rotate(-5deg);
@@ -142,7 +200,6 @@ header{
   -o-transform: rotate(5deg);
   transform: rotate(5deg);
   animation:spinLeft 3s;
-
 }
 
 #RankingTittle{
@@ -169,4 +226,4 @@ header{
     50%  {margin-right:0;}
     75% {margin-left:90%;}
     100% {margin-right:0;}
-}
+} */

@@ -31,6 +31,10 @@ class Context {
   }
   /** Init nav bar menu and manipulate evetntlisteners to menu items */
   initMenu() {
+    let btnHome = document.getElementById('btnHome');
+    btnHome.addEventListener('click', () => {
+      this.getTemplateRanking();
+    });
     let addTask = document.getElementById('addGradedTask');
     addTask.addEventListener('click', () => {
       this.addGradedTask();
@@ -52,12 +56,13 @@ class Context {
       localStorage.setItem('students',JSON.stringify(this.students));
       let GRADED_TASKS = '';
       this.gradedTasks.forEach(function(taskItem) {
-        GRADED_TASKS += '<td>' + taskItem.name + '</td>';
+        GRADED_TASKS += '<div class="rankingTableRow rankingTableItem">' + taskItem.name + '</div>';
       });
 
       loadTemplate('templates/rankingList.html',function(responseText) {
               document.getElementById('content').innerHTML = eval('`' + responseText + '`');
               let tableBody = document.getElementById('idTableRankingBody');
+
               this.students.forEach(function(studentItem) {
                 let liEl = studentItem.getHTMLView();
                 tableBody.appendChild(liEl);
