@@ -1,22 +1,17 @@
 /* Styles go here */
 
 body {
-    background-color: lightblue !important;
+    background-color: orange !important;
   }
 
-  .itemNav {
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    margin: 0 auto;
-  }
+
 
 .button_menu{
     font-size: 15px !important;
     text-align: center;
     color: grey;
     display: block;
-    background-color: white;
+    background-color: #EFEFEF;
     flex-flow: row nowrap;
     flex-grow: 1;
     flex-basis: 0;
@@ -63,7 +58,7 @@ input[type=text], select {
 }
 
 input[type=number], select {
-    width: 100%;
+    width: 100%;center
     padding: 5px;
     margin: 8px 0;
     display: inline-block;
@@ -122,15 +117,15 @@ form {
   display: grid;
   grid-template-areas:
     'header nav nav nav nav'
-    'rankingLeft main main main main'
+    'main main main main main'
     'notification notification notification notification notification'
     'footer footer footer footer footer';
   grid-gap: 10px;
-  background-color: #2196F3;
+  /*background-color: #D3D3D3;*/
   padding: 0.5%;
 }
 .grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
+  /*background-color: rgba(255, 255, 255, 0.8);*/
   text-align: center;
   padding: 0.5% 0;
   /* font-size: 30px; */
@@ -139,6 +134,24 @@ form {
 .content {
   margin: 0 auto;
   padding-bottom: 2%;
+  background-color: white;
+}
+
+.itemNav {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 0 auto;
+  background-color: orange;
+  height: 70%;
+}
+
+.itemHeader {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  text-align: center;
+  height: 70%;
 }
 
 textarea {
