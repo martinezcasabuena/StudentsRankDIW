@@ -1,13 +1,12 @@
 /* Styles go here */
 
 body {
-    background-color: orange !important;
+    background-color: #E2E8E6 !important;
+    font-family: helvetica;
   }
 
-
-
 .button_menu{
-    font-size: 15px !important;
+    /* font-size: 15px !important; */
     text-align: center;
     color: grey;
     display: block;
@@ -17,27 +16,30 @@ body {
     flex-basis: 0;
     padding: 0.5em;
     height: 2.3em;
-    margin: auto 0.3em;
+    margin: auto 5em;
+    font-weight: bold;
   }
 
-
 .button_menu:hover{
-    color: teal;
+    color: #F74356;
     background-color: #ffffff;
-    box-shadow: 5px 5px 2px grey;
-    text-shadow: 0px 0px 0px;
+    -webkit-transition: background-color 1s ease-out;
+    -moz-transition: background-color 1s ease-out;
+    -o-transition: background-color 1s ease-out;
+    transition: background-color 1s ease-out;
 }
 
 .button_attitude{
     text-decoration: none;
     padding: 8px;
     color: #ffffff;
-    background-color: teal;
+    background-color: #F74356;
     border-radius: 6px;
-    border: 1px solid;
-    text-shadow: 2px 2px 0px black;
-    box-shadow: 3px 3px grey;
+    /* border: 1px solid; */
+    /* text-shadow: 2px 2px 0px black; */
+    /* box-shadow: 3px 3px grey; */
     margin-right: 5px;
+    font-weight: bold;
 }
 
 .button_attitude:hover{
@@ -80,12 +82,14 @@ form {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-  /* border:1px solid black; */
   font-size: 1rem;
   margin: 0.5rem;
   line-height: 1.5;
   width: 61%;
-  /* margin: 0 auto; */
+  background-color: #E2E8E6;
+  border-radius: 6px;
+  /* border: 1px solid grey; */
+  /* height: 40em; */
 }
 .rankingTableHeader {
 
@@ -105,6 +109,10 @@ form {
   padding: 0.5em;
 }
 
+.addStudent {
+
+}
+
 /*Page grid style */
 .itemHeader { grid-area: header; }
 .itemNav { grid-area: nav; }
@@ -116,7 +124,7 @@ form {
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header nav nav nav nav'
+    'nav nav nav nav nav'
     'main main main main main'
     'notification notification notification notification notification'
     'footer footer footer footer footer';
@@ -134,7 +142,6 @@ form {
 .content {
   margin: 0 auto;
   padding-bottom: 2%;
-  background-color: white;
 }
 
 .itemNav {
@@ -142,8 +149,16 @@ form {
   display: flex;
   flex-flow: row nowrap;
   margin: 0 auto;
-  background-color: orange;
-  height: 70%;
+  background-color: #E2E8E6;
+  height: 90%;
+}
+
+.itemNav > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: #E2E8E6;
 }
 
 .itemHeader {
@@ -152,6 +167,15 @@ form {
   flex-flow: row nowrap;
   text-align: center;
   height: 70%;
+}
+
+.itemFooter {
+  background-color: #464E47;
+  color: white;
+}
+
+.itemNotification {
+  background-color: #F74356;
 }
 
 textarea {
@@ -168,8 +192,32 @@ a:link{ color: #0f0753 } /* visited links */
 a:visited { color: blue } /* visited links */
 a:active { color: black } /* active links */
 
-h1 {
+/* h1 {
  text-shadow: 1px 1px 0px white, 2px 2px 0px grey;
+} */
+
+.headerFont {
+  font-size: 3.5em;
+  color: #F74356;
+
+}
+
+.menuFont {
+  font-size: 1.2em;
+  color: #464E47;
+}
+
+.tableHeaderFont {
+  font-size: 1.2em;
+  /* color: #0E1011; */
+  color: #464E47;
+  font-weight: bold;
+}
+
+.tableStudentFont {
+  font-size: 1.1em;
+  color: #464E47;
+  /* color: #4A5A5E; */
 }
 
 /* footer{
@@ -191,36 +239,20 @@ header{
   background-size: 100% auto;
 }
 
-/* * {
-  box-sizing: border-box;
-} */
 
 @media screen and (min-width:300px) {
-  /* For mobile phones: */
-  /*.itemNav, .itemMid, .right {
-    width:100%;
-    background-color: red;
-  }*/
-  /* .grid-container {
-    display: grid;
-    grid-template-areas:
-      'header'
-      'nav'
-      'main'
-      'notification'
-      'footer'
-  } */
+
 }
 
 @media screen and (min-width:1024px) {
-  .itemNav {
+  /* .itemNav {
     width: 100%;
     display: flex;
     flex-flow: row nowrap;
     margin: 0 auto;
     background-color: orange;
     height: 70%;
-  }
+  } */
 }
 
 @media screen and (max-width:1024px) {
@@ -234,27 +266,31 @@ header{
       'notification'
       'footer';
       grid-gap: 10px;
-      /*background-color: #D3D3D3;*/
       padding: 0.5%;
+
   }
 
   .itemNav {
-    width: 100%;
     display: table;
-    /* flex-flow: row nowrap; */
-    margin: 0 auto;
-    background-color: blue;
-    height: 70%;
   }
 
   .itemNav > div {
-    height: 120px;
+    display: flex;
+    height: 5em;
     margin: 15px;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
   }
 
   .content {
     width: 100%;
-    background-color: white;
+    /* background-color: white; */
+  }
+
+  .headerFont {
+    text-align: center;
+    width: 100%;
   }
 }
 

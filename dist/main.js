@@ -132,7 +132,7 @@ var Context = function () {
         localStorage.setItem('students', JSON.stringify(this.students));
         var GRADED_TASKS = '';
         this.gradedTasks.forEach(function (taskItem) {
-          GRADED_TASKS += '<div class="rankingTableRow rankingTableItem">' + taskItem.name + '</div>';
+          GRADED_TASKS += '<div class="rankingTableRow rankingTableItem tableHeaderFont">' + taskItem.name + '</div>';
         });
 
         (0, _utils.loadTemplate)('templates/rankingList.html', function (responseText) {
@@ -490,7 +490,7 @@ function hashcode(str) {
 /** Pass a text or an element ang get a td table element wrapping it. */
 function getElementTd(text) {
   var tdEl = document.createElement('div');
-  tdEl.className = "rankingTableRow rankingTableItem";
+  tdEl.className = "rankingTableRow rankingTableItem tableStudentFont";
   var t = text;
   if (typeof text === 'string' || typeof text === 'number') {
     t = document.createTextNode(text); // Create a text node

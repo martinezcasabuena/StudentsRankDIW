@@ -15,7 +15,7 @@ function hashcode(str) {
 /** Pass a text or an element ang get a td table element wrapping it. */
 function getElementTd(text) {
   let tdEl = document.createElement('div');
-  tdEl.className = "rankingTableRow rankingTableItem"
+  tdEl.className = "rankingTableRow rankingTableItem tableStudentFont"
   let t = text;
   if (typeof text === 'string' || typeof text === 'number') {
     t = document.createTextNode(text); // Create a text node
