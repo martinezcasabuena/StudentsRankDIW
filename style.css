@@ -1,11 +1,11 @@
 /* Styles go here */
 
-body {
+.body {
     background-color: #E2E8E6 !important;
     font-family: helvetica;
   }
 
-.button_menu{
+.header__button-menu {
     /* font-size: 15px !important; */
     text-align: center;
     color: grey;
@@ -20,7 +20,7 @@ body {
     font-weight: bold;
   }
 
-.button_menu:hover{
+.header__button-menu:hover {
     color: #F74356;
     background-color: #ffffff;
     -webkit-transition: background-color 1s ease-out;
@@ -29,7 +29,7 @@ body {
     transition: background-color 1s ease-out;
 }
 
-.button_attitude{
+.button_attitude {
     text-decoration: none;
     padding: 8px;
     color: #ffffff;
@@ -42,11 +42,23 @@ body {
     font-weight: bold;
 }
 
-.button_attitude:hover{
+.button_attitude:hover {
     color: teal;
     background-color: #ffffff;
     box-shadow: 3px 3px grey;
     text-shadow: 0px 0px 0px black;
+}
+
+.button_save {
+  /* font-size: 15px !important; */
+  text-align: center;
+  color: grey;
+  display: block;
+  background-color: #EFEFEF;
+  padding: 0.5em;
+  height: 2.3em;
+  margin: auto 5em;
+  font-weight: bold;
 }
 
 input[type=text], select {
@@ -78,7 +90,7 @@ form {
 }
 
 /*Table Style */
-.rankingTable {
+.itemMid__rankingTable {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
@@ -95,7 +107,7 @@ form {
 
 }
 
-.rankingTableRow {
+.itemMid__rankingTable__rankingTableRow {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
@@ -115,7 +127,7 @@ form {
 
 /*Page grid style */
 .itemHeader { grid-area: header; }
-.itemNav { grid-area: nav; }
+.header { grid-area: header; }
 .itemLeft { grid-area: rankingLeft; }
 .itemMid { grid-area: main; }
 .itemNotification { grid-area: notification; }
@@ -124,7 +136,7 @@ form {
 .grid-container {
   display: grid;
   grid-template-areas:
-    'nav nav nav nav nav'
+    'header header header header header'
     'main main main main main'
     'notification notification notification notification notification'
     'footer footer footer footer footer';
@@ -139,12 +151,12 @@ form {
   /* font-size: 30px; */
 }
 
-.content {
+.itemMid__content {
   margin: 0 auto;
   padding-bottom: 2%;
 }
 
-.itemNav {
+.header {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
@@ -153,7 +165,7 @@ form {
   height: 90%;
 }
 
-.itemNav > div {
+.header > div {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -196,13 +208,13 @@ a:active { color: black } /* active links */
  text-shadow: 1px 1px 0px white, 2px 2px 0px grey;
 } */
 
-.headerFont {
+.header__titleFont {
   font-size: 3.5em;
   color: #F74356;
 
 }
 
-.menuFont {
+.header__menuFont {
   font-size: 1.2em;
   color: #464E47;
 }
@@ -230,14 +242,14 @@ a:active { color: black } /* active links */
   width: 60%;
 } */
 
-header{
+/*header{
   margin-left: 20%;
   margin-right: 20%;
   background: url(http://www.makdigitaldesign.com/wp-content/uploads/2017/10/css3-in-all-its-glory.png);
   background-repeat: no-repeat;
   background-origin:content-box;
   background-size: 100% auto;
-}
+}*/
 
 
 @media screen and (min-width:300px) {
@@ -245,7 +257,7 @@ header{
 }
 
 @media screen and (min-width:1024px) {
-  /* .itemNav {
+  /* .header {
     width: 100%;
     display: flex;
     flex-flow: row nowrap;
@@ -270,11 +282,11 @@ header{
 
   }
 
-  .itemNav {
+  .header {
     display: table;
   }
 
-  .itemNav > div {
+  .header > div {
     display: flex;
     height: 5em;
     margin: 15px;

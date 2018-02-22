@@ -6,21 +6,15 @@
     <link type="text/plain" rel="author" href="humans.txt" />
     <script src="dist/main.js" ></script>
   </head>
-  <body role="body">
+  <body class="body" role="body">
     <div class="grid-container" role="grid">
-      <!-- <div class="itemHeader" role="banner"> -->
-        <!-- <label class="headerFont">Students Rank</label> -->
-        <!-- <img src="http://s6.static-footeo.com/uploads/stadechevillonnais/Medias/podium.png" width="120px" height="120px"></img> -->
-      <!-- </div> -->
+      <header class="header" role="header">
+        <label class="header__titleFont">Students Rank</label>
+        <div aria-pressed="false" class="header__button-menu header__menuFont" role="button" title="Home" id="btnHome">Home</div>
+        <div aria-pressed="false" class="header__button-menu header__menuFont" role="button" title="Add a new student" id="addStudent">Add student</div>
+        <div aria-pressed="false" class="header__button-menu header__menuFont" role="button" title="Add a new graded task" id="addGradedTask">Add graded task</div>
+      </header>
 
-      <div class="itemNav" role="nav">
-        <label class="headerFont">Students Rank</label>
-        <div aria-pressed="false" class="button_menu menuFont" role="button" title="Home" id="btnHome">Home</div>
-        <div aria-pressed="false" class="button_menu menuFont" role="button" title="Add a new student" id="addStudent">Add student</div>
-        <div aria-pressed="false" class="button_menu menuFont" role="button" title="Add a new graded task" id="addGradedTask">Add graded task</div>
-      </div>
-
-      <!-- <div class="itemLeft"></div> -->
       <div class="itemMid" id="content" role="main" ></div>
 
       <div class="itemNotification" role="notification-area">
