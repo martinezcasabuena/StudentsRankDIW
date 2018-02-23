@@ -6,11 +6,9 @@
   }
 
 .header__button-menu {
-    /* font-size: 15px !important; */
     text-align: center;
-    color: grey;
-    display: block;
-    background-color: #EFEFEF;
+    display: flex;
+    background-color: #E2E8E6;
     flex-flow: row nowrap;
     flex-grow: 1;
     flex-basis: 0;
@@ -18,6 +16,8 @@
     height: 2.3em;
     margin: auto 5em;
     font-weight: bold;
+    justify-content: center;
+    flex-direction: column;
   }
 
 .header__button-menu:hover {
@@ -61,7 +61,7 @@
   font-weight: bold;
 }
 
-input[type=text], select {
+.inputText {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -71,8 +71,8 @@ input[type=text], select {
     box-sizing: border-box;
 }
 
-input[type=number], select {
-    width: 100%;center
+.inputNumber {
+    width: 100%;
     padding: 5px;
     margin: 8px 0;
     display: inline-block;
@@ -81,7 +81,7 @@ input[type=number], select {
     box-sizing: border-box;
 }
 
-form {
+.form {
     width:300px;
     border-radius: 5px;
     background-color: #f2f2f2;
@@ -136,19 +136,16 @@ form {
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header header header header header'
-    'main main main main main'
-    'notification notification notification notification notification'
-    'footer footer footer footer footer';
+    'header'
+    'main'
+    'notification'
+    'footer';
   grid-gap: 10px;
-  /*background-color: #D3D3D3;*/
   padding: 0.5%;
 }
-.grid-container > div {
-  /*background-color: rgba(255, 255, 255, 0.8);*/
+.grid-container__div {
   text-align: center;
   padding: 0.5% 0;
-  /* font-size: 30px; */
 }
 
 .itemMid__content {
@@ -163,14 +160,6 @@ form {
   margin: 0 auto;
   background-color: #E2E8E6;
   height: 90%;
-}
-
-.header > div {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  background-color: #E2E8E6;
 }
 
 .itemHeader {
@@ -190,7 +179,7 @@ form {
   background-color: #F74356;
 }
 
-textarea {
+.inputTextArea {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -269,24 +258,11 @@ a:active { color: black } /* active links */
 
 @media screen and (max-width:1024px) {
 
-  .grid-container {
-    display: grid;
-    grid-template-areas:
-      'header'
-      'nav'
-      'main'
-      'notification'
-      'footer';
-      grid-gap: 10px;
-      padding: 0.5%;
-
-  }
-
   .header {
     display: table;
   }
 
-  .header > div {
+  .header__button-menu {
     display: flex;
     height: 5em;
     margin: 15px;

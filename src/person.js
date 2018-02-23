@@ -117,6 +117,7 @@ class Person {
     this.gradedTasks.forEach(function(gTaskItem) {
         let inputEl = document.createElement('input');
         inputEl.type = 'number';
+        inputEl.className = 'inputNumber';
         inputEl.min = 0;
         inputEl.max = 100;
         inputEl.value = gTaskItem['points'];
