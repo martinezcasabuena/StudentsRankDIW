@@ -63,7 +63,7 @@ class Person {
    * every gradded task binded for that person. */
   getHTMLView() {
     let liEl = document.createElement('div');
-    liEl.className = "rankingTableRow";
+    liEl.className = "rankingTable__rankingTableRow";
     let esEL = getElementTd(this.surname + ', ' + this.name);
     esEL.addEventListener('click', () => {
       loadTemplate('templates/detailStudent.html',function(responseText) {
@@ -88,7 +88,7 @@ class Person {
 
     let addAttitudeTaskEl = document.createElement('button');
     addAttitudeTaskEl.setAttribute('aria-pressed', false);
-    addAttitudeTaskEl.className='button_attitude';
+    addAttitudeTaskEl.className='rankingTable__button_attitude';
     let tb = document.createTextNode('+XP');
     addAttitudeTaskEl.appendChild(tb);
 

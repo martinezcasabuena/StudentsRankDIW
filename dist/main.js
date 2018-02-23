@@ -132,7 +132,7 @@ var Context = function () {
         localStorage.setItem('students', JSON.stringify(this.students));
         var GRADED_TASKS = '';
         this.gradedTasks.forEach(function (taskItem) {
-          GRADED_TASKS += '<div class="rankingTableRow rankingTableItem tableHeaderFont">' + taskItem.name + '</div>';
+          GRADED_TASKS += '<div class="rankingTable__rankingTableRow rankingTable__rankingTableHeader rankingTable__tableHeaderFont">' + taskItem.name + '</div>';
         });
 
         (0, _utils.loadTemplate)('templates/rankingList.html', function (responseText) {
@@ -369,7 +369,7 @@ var Person = function () {
       var _this = this;
 
       var liEl = document.createElement('div');
-      liEl.className = "rankingTableRow";
+      liEl.className = "rankingTable__rankingTableRow";
       var esEL = (0, _utils.getElementTd)(this.surname + ', ' + this.name);
       esEL.addEventListener('click', function () {
         (0, _utils.loadTemplate)('templates/detailStudent.html', function (responseText) {
@@ -392,7 +392,7 @@ var Person = function () {
 
       var addAttitudeTaskEl = document.createElement('button');
       addAttitudeTaskEl.setAttribute('aria-pressed', false);
-      addAttitudeTaskEl.className = 'button_attitude';
+      addAttitudeTaskEl.className = 'rankingTable__button_attitude';
       var tb = document.createTextNode('+XP');
       addAttitudeTaskEl.appendChild(tb);
 
@@ -490,7 +490,7 @@ function hashcode(str) {
 /** Pass a text or an element ang get a td table element wrapping it. */
 function getElementTd(text) {
   var tdEl = document.createElement('div');
-  tdEl.className = "rankingTableRow rankingTableItem tableStudentFont";
+  tdEl.className = "rankingTable__rankingTableRow rankingTable__rankingTableItem rankingTable__tableStudentFont";
   var t = text;
   if (typeof text === 'string' || typeof text === 'number') {
     t = document.createTextNode(text); // Create a text node

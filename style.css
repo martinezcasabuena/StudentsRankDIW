@@ -29,7 +29,7 @@
     transition: background-color 1s ease-out;
 }
 
-.button_attitude {
+.rankingTable__button_attitude {
     text-decoration: none;
     padding: 8px;
     color: #ffffff;
@@ -42,7 +42,7 @@
     font-weight: bold;
 }
 
-.button_attitude:hover {
+.rankingTable__button_attitude:hover {
     color: teal;
     background-color: #ffffff;
     box-shadow: 3px 3px grey;
@@ -103,17 +103,17 @@ form {
   /* border: 1px solid grey; */
   /* height: 40em; */
 }
-.rankingTableHeader {
+.rankingTable__rankingTableHeader {
 
 }
 
-.itemMid__rankingTable__rankingTableRow {
+.rankingTable__rankingTableRow {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
 }
 
-.rankingTableItem {
+.rankingTable__rankingTableItem {
   display: flex;
   flex-flow: row nowrap;
   flex-grow: 1;
@@ -219,14 +219,14 @@ a:active { color: black } /* active links */
   color: #464E47;
 }
 
-.tableHeaderFont {
+.rankingTable__tableHeaderFont {
   font-size: 1.2em;
   /* color: #0E1011; */
   color: #464E47;
   font-weight: bold;
 }
 
-.tableStudentFont {
+.rankingTable__tableStudentFont {
   font-size: 1.1em;
   color: #464E47;
   /* color: #4A5A5E; */
@@ -252,9 +252,9 @@ a:active { color: black } /* active links */
 }*/
 
 
-@media screen and (min-width:300px) {
+/* @media screen and (min-width:300px) {
 
-}
+} */
 
 @media screen and (min-width:1024px) {
   /* .header {
@@ -295,12 +295,12 @@ a:active { color: black } /* active links */
     text-align: center;
   }
 
-  .content {
+  .itemMid__content {
     width: 100%;
     /* background-color: white; */
   }
 
-  .headerFont {
+  .rankingTable__tableHeaderFont {
     text-align: center;
     width: 100%;
   }
