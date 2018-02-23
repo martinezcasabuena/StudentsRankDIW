@@ -418,6 +418,7 @@ var Person = function () {
       this.gradedTasks.forEach(function (gTaskItem) {
         var inputEl = document.createElement('input');
         inputEl.type = 'number';
+        inputEl.setAttribute('aria-label', "input" + gTaskItem.task.name);
         inputEl.className = 'inputNumber';
         inputEl.min = 0;
         inputEl.max = 100;

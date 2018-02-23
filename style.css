@@ -1,4 +1,15 @@
 /* Styles go here */
+/*------------------------------------*\
+    Contenido del html
+\*------------------------------------*/
+/*
+  * Header..............Contiene la navegación de la web. Situado en la parte superior.
+  * Body................Contiene toda la estructura de la web.Situado en la parte intermedia.
+  * NotificationArea....En este espacio se muestran las acciones que realizamos sobre los estudiantes.
+  * Footer..............Contiene la información sobre el desarrollador de la web. Situado en la aprte inferior.
+  * RankingTable........Contine la mayor funcionalidad de la web. Muestra una tabla con los estudiantes y las tareas.
+  * Forms...............Formularios para crear estudiantes y tareas.
+*/
 
 .body {
     background-color: #E2E8E6 !important;
@@ -14,7 +25,7 @@
     flex-basis: 0;
     padding: 0.5em;
     height: 2.3em;
-    margin: auto 5em;
+    margin: auto 3.2em;
     font-weight: bold;
     justify-content: center;
     flex-direction: column;
