@@ -11,10 +11,132 @@
   * Forms...............Formularios para crear estudiantes y tareas.
 */
 
+/****BODY****/
 .body {
     background-color: #E2E8E6 !important;
     font-family: helvetica;
   }
+
+
+  /*Table Style */
+  .itemMid__rankingTable {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    margin: 0.5rem;
+    line-height: 1.5;
+    width: 61%;
+    background-color: #E2E8E6;
+    border-radius: 6px;
+    overflow: auto;
+    max-width: 100%;
+  }
+  .rankingTable__rankingTableHeader {
+    /* padding: 0.5em;
+    min-width: 12%;
+    text-align: center; */
+  }
+
+  .rankingTable__rankingTableRow {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  .rankingTable__rankingTableItem {
+    padding: 0.5em;
+    min-width: 12%;
+  }
+
+  .rankingTable__button_attitude {
+      text-decoration: none;
+      padding: 8px;
+      color: #ffffff;
+      background-color: #F74356;
+      border-radius: 6px;
+      margin-right: 5px;
+      font-weight: bold;
+  }
+
+  .rankingTable__button_attitude:hover {
+      color: teal;
+      background-color: #ffffff;
+      box-shadow: 3px 3px grey;
+      text-shadow: 0px 0px 0px black;
+  }
+
+
+  .rankingTable__tableHeaderFont {
+    font-size: 1.2em;
+    /* color: #0E1011; */
+    color: #464E47;
+    font-weight: bold;
+  }
+
+  .rankingTable__tableStudentFont {
+    font-size: 1.1em;
+    color: #464E47;
+    /* color: #4A5A5E; */
+  }
+
+
+  /*Page grid style */
+  .itemHeader { grid-area: header; }
+  .header { grid-area: header; }
+  .itemLeft { grid-area: rankingLeft; }
+  .itemMid { grid-area: main; }
+  .itemNotification { grid-area: notification; }
+  .itemFooter { grid-area: footer; }
+
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      'header'
+      'main'
+      'notification'
+      'footer';
+    grid-gap: 10px;
+    padding: 0.5%;
+  }
+  .grid-container__div {
+    text-align: center;
+    padding: 0.5% 0;
+  }
+
+  .itemMid__content {
+    margin: 0 auto;
+    padding-bottom: 2%;
+  }
+
+  .itemHeader {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    text-align: center;
+    height: 70%;
+  }
+
+  .itemFooter {
+    background-color: #464E47;
+    color: white;
+  }
+
+  .itemNotification {
+    padding: 1em;
+    background-color: #F74356;
+  }
+
+
+/******HEADER******/
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 0 auto;
+  background-color: #E2E8E6;
+  height: 90%;
+}
 
 .header__button-menu {
     text-align: center;
@@ -41,25 +163,18 @@
     transition: background-color 0.5s ease-out;
 }
 
-.rankingTable__button_attitude {
-    text-decoration: none;
-    padding: 8px;
-    color: #ffffff;
-    background-color: #F74356;
-    border-radius: 6px;
-    /* border: 1px solid; */
-    /* text-shadow: 2px 2px 0px black; */
-    /* box-shadow: 3px 3px grey; */
-    margin-right: 5px;
-    font-weight: bold;
+.header__titleFont {
+  font-size: 3.5em;
+  color: #F74356;
 }
 
-.rankingTable__button_attitude:hover {
-    color: teal;
-    background-color: #ffffff;
-    box-shadow: 3px 3px grey;
-    text-shadow: 0px 0px 0px black;
+.header__menuFont {
+  font-size: 1.2em;
+  color: #464E47;
 }
+
+
+/*****FORMS*****/
 
 .button_save {
   width: 100%;
@@ -111,96 +226,6 @@
     margin: 0 auto;
 }
 
-/*Table Style */
-.itemMid__rankingTable {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  margin: 0.5rem;
-  line-height: 1.5;
-  width: 61%;
-  background-color: #E2E8E6;
-  border-radius: 6px;
-  overflow: auto;
-  max-width: 100%;
-}
-.rankingTable__rankingTableHeader {
-  /* padding: 0.5em;
-  min-width: 12%;
-  text-align: center; */
-}
-
-.rankingTable__rankingTableRow {
-  width: 100%;
-  display: flex;
-  flex-flow: row nowrap;
-}
-
-.rankingTable__rankingTableItem {
-  /* display: flex;
-  flex-flow: row nowrap;
-  flex-grow: 1;
-  flex-basis: 0;
-  padding: 0.5em; */
-  padding: 0.5em;
-  min-width: 12%;
-}
-
-/*Page grid style */
-.itemHeader { grid-area: header; }
-.header { grid-area: header; }
-.itemLeft { grid-area: rankingLeft; }
-.itemMid { grid-area: main; }
-.itemNotification { grid-area: notification; }
-.itemFooter { grid-area: footer; }
-
-.grid-container {
-  display: grid;
-  grid-template-areas:
-    'header'
-    'main'
-    'notification'
-    'footer';
-  grid-gap: 10px;
-  padding: 0.5%;
-}
-.grid-container__div {
-  text-align: center;
-  padding: 0.5% 0;
-}
-
-.itemMid__content {
-  margin: 0 auto;
-  padding-bottom: 2%;
-}
-
-.header {
-  width: 100%;
-  display: flex;
-  flex-flow: row nowrap;
-  margin: 0 auto;
-  background-color: #E2E8E6;
-  height: 90%;
-}
-
-.itemHeader {
-  width: 100%;
-  display: flex;
-  flex-flow: row nowrap;
-  text-align: center;
-  height: 70%;
-}
-
-.itemFooter {
-  background-color: #464E47;
-  color: white;
-}
-
-.itemNotification {
-  padding: 1em;
-  background-color: #F74356;
-}
-
 .inputTextArea {
     width: 100%;
     padding: 12px 12px;
@@ -209,33 +234,6 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-}
-
-a:link{ color: white } /* visited links */
-a:visited { color: white } /* visited links */
-
-
-.header__titleFont {
-  font-size: 3.5em;
-  color: #F74356;
-}
-
-.header__menuFont {
-  font-size: 1.2em;
-  color: #464E47;
-}
-
-.rankingTable__tableHeaderFont {
-  font-size: 1.2em;
-  /* color: #0E1011; */
-  color: #464E47;
-  font-weight: bold;
-}
-
-.rankingTable__tableStudentFont {
-  font-size: 1.1em;
-  color: #464E47;
-  /* color: #4A5A5E; */
 }
 
 .addStudent__title, .addGradedTask__title {
@@ -248,6 +246,12 @@ a:visited { color: white } /* visited links */
 .form__textLabel {
   font-size: 1em;
 }
+
+a:link{ color: white } /* visited links */
+a:visited { color: white } /* visited links */
+
+
+/*****Student Details*****/
 
 .studentDetails {
   margin: 0 auto;
@@ -295,34 +299,7 @@ a:visited { color: white } /* visited links */
 }
 
 
-/* footer{
-  margin-left: 20%;
-  padding: 4px;
-  background-color: teal;
-  background-clip:border-box;
-  position:fixed;
-  bottom:0;
-  width: 60%;
-} */
-
-/*header{
-  margin-left: 20%;
-  margin-right: 20%;
-  background: url(http://www.makdigitaldesign.com/wp-content/uploads/2017/10/css3-in-all-its-glory.png);
-  background-repeat: no-repeat;
-  background-origin:content-box;
-  background-size: 100% auto;
-}*/
-
-
-/* @media screen and (min-width:300px) {
-
-} */
-
-/* @media screen and (min-width:1024px) {
-
-} */
-
+/****Media queries*****/
 @media screen and (max-width:1024px) {
 
   .header {
