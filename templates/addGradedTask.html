@@ -1,16 +1,16 @@
 <div class="itemMid__content">
-  <h3>Add new Graded Task</h3>
-  We understand as a graded task any test or practice that will be marked by teacher and should be reflected in the final mark.
+  <label class="addGradedTask__title">Add new Graded Task</label>
+  <label>We understand as a graded task any test or practice that will be marked by teacher and should be reflected in the final mark.</label>
   <br><br>
   <form class="form" id="newGradedTask">
-    Task name:<br>
+    <label for="taskname" class="form__textLabel">Task name:</label>
     <input class="inputText" type="text" id="idTaskName" name="taskname" value="" required>
     <br>
-    Task description:<br>
+    <label for="taskdescription" class="form__textLabel">Task description:</label>
     <textarea class="inputTextArea" rows="4" cols="50" id="idTaskDescription" name="taskdescription" value="" required></textarea>
     <br>
-    Task Weight (0-100 %):<br>
-    <input class="inputNumber" type="number" id="idTaskWeight" name="taskweight" value="" required>
+    <label for="taskweight" class="form__textLabel">Task Weight (0-100 %):</label>
+    <input class="inputNumberForm" type="number" id="idTaskWeight" name="taskweight" value="" required>
     <br><br>
     <input type="submit" class="button_save" value="Save">
   </form>
