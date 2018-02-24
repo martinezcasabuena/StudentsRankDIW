@@ -1,13 +1,59 @@
-<h3>Positive behaviours</h3>
-<button class="xp" value="20" style="width:100%"> +20 Correctly answer a question in class using English </button>
-<button class="xp" value="20" style="width:100%"> +20 Present your solution in front of class </button>
-<button class="xp" value="100" style="width:100%"> +100 Finish a proposed task before class ends </button>
-<button class="xp" value="50" style="width:100%"> +50 Asking insightful questions about the lesson </button>
-<br>
-<h3>Negative behaviours</h3>
-<button class="xp" value="-20" style="width:100%"> -20 Arriving late to class </button>
-<button class="xp" value="-30" style="width:100%"> -30 Not answer in english when you have been asked in english </button>
-<button class="xp" value="-100" style="width:100%"> -100 Delayed homework delivery </button>
+<head>
+  <style>
 
+  .attitudeTasksBody {
+    background-color: #E2E8E6;
+    font-family: helvetica;
+  }
 
+  .buttonXP {
+    width: 100%;
+    color: white;
+    padding: 10px 10px;
+    margin: 4px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
 
+  .buttonXP--good {
+    background-color: #5DC456;
+  }
+
+  .buttonXP--good:hover {
+    background-color: #44C43A;
+  }
+
+  .buttonXP--bad {
+    background-color: #F74356;
+  }
+
+  .buttonXP--bad:hover {
+    background-color: #F72C40;
+  }
+
+  .attitudeTask__title {
+    font-size: 1.5em;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    margin: 15px;
+    color: #464E47;
+  }
+
+  </style>
+</head>
+
+<body class="attitudeTasksBody">
+  <label class="attitudeTask__title">Positive behaviours</label>
+  <button class="buttonXP buttonXP--good" value="20" style="width:100%"> +20 Correctly answer a question in class using English </button>
+  <button class="buttonXP buttonXP--good" value="20" style="width:100%"> +20 Present your solution in front of class </button>
+  <button class="buttonXP buttonXP--good" value="100" style="width:100%"> +100 Finish a proposed task before class ends </button>
+  <button class="buttonXP buttonXP--good" value="50" style="width:100%"> +50 Asking insightful questions about the lesson </button>
+  <br>
+  <label class="attitudeTask__title">Negative behaviours</label>
+  <button class="buttonXP buttonXP--bad" value="-20" style="width:100%"> -20 Arriving late to class </button>
+  <button class="buttonXP buttonXP--bad" value="-30" style="width:100%"> -30 Not answer in english when you have been asked in english </button>
+  <button class="buttonXP buttonXP--bad" value="-100" style="width:100%"> -100 Delayed homework delivery </button>
+  </body>

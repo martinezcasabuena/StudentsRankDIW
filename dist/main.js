@@ -132,7 +132,7 @@ var Context = function () {
         localStorage.setItem('students', JSON.stringify(this.students));
         var GRADED_TASKS = '';
         this.gradedTasks.forEach(function (taskItem) {
-          GRADED_TASKS += '<div class="rankingTable__rankingTableRow rankingTable__rankingTableHeader rankingTable__tableHeaderFont">' + taskItem.name + '</div>';
+          GRADED_TASKS += '<div class="rankingTable__rankingTableRow rankingTable__rankingTableItem rankingTable__tableHeaderFont">' + taskItem.name + '</div>';
         });
 
         (0, _utils.loadTemplate)('templates/rankingList.html', function (responseText) {
@@ -399,7 +399,7 @@ var Person = function () {
       liEl.appendChild((0, _utils.getElementTd)(addAttitudeTaskEl));
 
       addAttitudeTaskEl.addEventListener('click', function () {
-        var popUp = (0, _utils.popupwindow)('templates/listAttitudeTasks.html', 'XP points to ' + _this.name, 300, 400);
+        var popUp = (0, _utils.popupwindow)('templates/listAttitudeTasks.html', 'XP points to ' + _this.name, 350, 480);
         var personInstance = _this;
         popUp.onload = function () {
           popUp.document.title = personInstance.name + ' ' + personInstance.surname + ' XP points';

@@ -96,7 +96,7 @@ class Person {
 
     addAttitudeTaskEl.addEventListener('click', () => {
           let popUp = popupwindow('templates/listAttitudeTasks.html','XP points to ' +
-                                   this.name,300,400);
+                                   this.name,350,480);
           let personInstance = this;
           popUp.onload = function() {
             popUp.document.title = personInstance.name + ' ' +

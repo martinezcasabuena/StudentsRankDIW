@@ -29,15 +29,16 @@
     font-weight: bold;
     justify-content: center;
     flex-direction: column;
+    cursor: pointer;
   }
 
 .header__button-menu:hover {
     color: #F74356;
     background-color: #ffffff;
-    -webkit-transition: background-color 1s ease-out;
-    -moz-transition: background-color 1s ease-out;
-    -o-transition: background-color 1s ease-out;
-    transition: background-color 1s ease-out;
+    -webkit-transition: background-color 0.5s ease-out;
+    -moz-transition: background-color 0.5s ease-out;
+    -o-transition: background-color 0.5s ease-out;
+    transition: background-color 0.5s ease-out;
 }
 
 .rankingTable__button_attitude {
@@ -61,20 +62,20 @@
 }
 
 .button_save {
-  /* font-size: 15px !important; */
-  text-align: center;
-  color: grey;
-  display: block;
-  background-color: #EFEFEF;
-  padding: 0.5em;
-  height: 2.3em;
-  margin: auto 5em;
-  font-weight: bold;
+  width: 100%;
+  background-color: #F74356;
+  color: white;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.4em;
 }
 
 .inputText {
     width: 100%;
-    padding: 12px 20px;
+    padding: 12px 12px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
@@ -84,12 +85,22 @@
 
 .inputNumber {
     width: 100%;
-    padding: 5px;
+    padding: 12px 12px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+.inputNumberForm {
+  width: 100%;
+  padding: 12px 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .form {
@@ -105,17 +116,18 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-  font-size: 1rem;
   margin: 0.5rem;
   line-height: 1.5;
   width: 61%;
   background-color: #E2E8E6;
   border-radius: 6px;
-  /* border: 1px solid grey; */
-  /* height: 40em; */
+  overflow: auto;
+  max-width: 100%;
 }
 .rankingTable__rankingTableHeader {
-
+  /* padding: 0.5em;
+  min-width: 12%;
+  text-align: center; */
 }
 
 .rankingTable__rankingTableRow {
@@ -125,15 +137,13 @@
 }
 
 .rankingTable__rankingTableItem {
-  display: flex;
+  /* display: flex;
   flex-flow: row nowrap;
   flex-grow: 1;
   flex-basis: 0;
+  padding: 0.5em; */
   padding: 0.5em;
-}
-
-.addStudent {
-
+  min-width: 12%;
 }
 
 /*Page grid style */
@@ -187,12 +197,13 @@
 }
 
 .itemNotification {
+  padding: 1em;
   background-color: #F74356;
 }
 
 .inputTextArea {
     width: 100%;
-    padding: 12px 20px;
+    padding: 12px 12px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
@@ -200,18 +211,13 @@
     box-sizing: border-box;
 }
 
-a:link{ color: #0f0753 } /* visited links */
-a:visited { color: blue } /* visited links */
-a:active { color: black } /* active links */
+a:link{ color: white } /* visited links */
+a:visited { color: white } /* visited links */
 
-/* h1 {
- text-shadow: 1px 1px 0px white, 2px 2px 0px grey;
-} */
 
 .header__titleFont {
   font-size: 3.5em;
   color: #F74356;
-
 }
 
 .header__menuFont {
@@ -231,6 +237,18 @@ a:active { color: black } /* active links */
   color: #464E47;
   /* color: #4A5A5E; */
 }
+
+.addStudent__title, .addGradedTask__title {
+  font-size: 1.5em;
+  display: block;
+  font-weight: bold;
+  margin: 1.5em;
+}
+
+.form__textLabel {
+  font-size: 1em;
+}
+
 
 /* footer{
   margin-left: 20%;
@@ -256,16 +274,9 @@ a:active { color: black } /* active links */
 
 } */
 
-@media screen and (min-width:1024px) {
-  /* .header {
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    margin: 0 auto;
-    background-color: orange;
-    height: 70%;
-  } */
-}
+/* @media screen and (min-width:1024px) {
+
+} */
 
 @media screen and (max-width:1024px) {
 
@@ -275,21 +286,70 @@ a:active { color: black } /* active links */
 
   .header__button-menu {
     display: flex;
-    height: 5em;
-    margin: 15px;
+    height: 4em;
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    margin: 10px auto;
+    background-color: white;
+  }
+
+  .header__menuFont {
+    font-size: 2.5em;
   }
 
   .itemMid__content {
     width: 100%;
-    /* background-color: white; */
   }
 
   .rankingTable__tableHeaderFont {
     text-align: center;
     width: 100%;
+  }
+
+  .header__titleFont {
+    font-size: 8em;
+    text-align: center;
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+  }
+
+  .rankingTable__tableStudentFont {
+    font-size: 2em;
+  }
+
+  .rankingTable__tableHeaderFont {
+    font-size: 2em;
+  }
+
+  .itemNotification {
+    margin-top: 4em;
+    font-size: 30px;
+  }
+
+  .itemFooter {
+    font-size: 30px;
+  }
+
+  .form {
+    width: 90%;
+  }
+
+  .inputText, .inputTextArea, .inputNumberForm{
+      font-size: 4em;
+  }
+
+  .addStudent__title, .addGradedTask__title {
+    font-size: 2.5em;
+  }
+
+  .form__textLabel {
+    font-size: 2.5em;
+  }
+
+  .button_save {
+    font-size: 4em;
+    padding: 25px 20px;
   }
 }
 
