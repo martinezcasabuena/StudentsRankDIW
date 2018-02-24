@@ -1,10 +1,22 @@
-<h1>${STUDENT.name} ${STUDENT.surname} ${STUDENT.getTotalPoints()}</h1>
-<h3>Attitude tasks</h3>
-<ul>
- ${ATTITUDE_TASKS}
-</ul>
-<h3>Graded tasks</h3>
-<ul>
-    ${GRADED_TASKS}
-</ul>
-   
+<div class="itemMid__content">
+  <div class="studentDetails">
+
+    <div class="studentDetails__header">
+      <h1>${STUDENT.name} ${STUDENT.surname} ${STUDENT.getTotalPoints()}</h1>
+      <img class="studentDetails__imgProfile" src="img/man.svg" alt="profile image"></img>
+    </div>
+
+    <div class="studentDetails__attitudeTasks">
+      <label class="studentDetails__title">Attitude tasks</label>
+      <ul style="list-style-type: none;">
+       ${ATTITUDE_TASKS}
+      </ul>
+    </div>
+    <div class="studentDetails__gradedTasks">
+      <label class="studentDetails__title">Graded tasks</label>
+      <ul>
+          ${GRADED_TASKS}
+      </ul>
+    </div>
+  </div>
+</div>

@@ -376,11 +376,11 @@ var Person = function () {
           var STUDENT = this;
           var ATTITUDE_TASKS = '';
           this.attitudeTasks.reverse().forEach(function (atItem) {
-            ATTITUDE_TASKS += '<li>' + atItem.task.points + '->' + atItem.task.description + '->' + (0, _utils.formatDate)(new Date(atItem.task.datetime)) + '</li>';
+            ATTITUDE_TASKS += '<li class="attitudeTasks__item">' + atItem.task.points + '->' + atItem.task.description + '->' + (0, _utils.formatDate)(new Date(atItem.task.datetime)) + '</li>';
           });
           var GRADED_TASKS = '';
           this.gradedTasks.forEach(function (gtItem) {
-            GRADED_TASKS += '<li>' + gtItem.points + '->' + gtItem.task.name + '->' + (0, _utils.formatDate)(new Date(gtItem.task.datetime)) + '</li>';
+            GRADED_TASKS += '<li class="gradedTasks__item">' + gtItem.points + '->' + gtItem.task.name + '->' + (0, _utils.formatDate)(new Date(gtItem.task.datetime)) + '</li>';
           });
           document.getElementById('content').innerHTML = eval('`' + responseText + '`');
         }.bind(_this));

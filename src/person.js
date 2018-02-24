@@ -70,12 +70,12 @@ class Person {
         let STUDENT = this;
         let ATTITUDE_TASKS = '';
         this.attitudeTasks.reverse().forEach(function(atItem) {
-          ATTITUDE_TASKS += '<li>' + atItem.task.points + '->' +
+          ATTITUDE_TASKS += '<li class="attitudeTasks__item">' + atItem.task.points + '->' +
                         atItem.task.description + '->' + formatDate(new Date(atItem.task.datetime)) + '</li>';
         });
         let GRADED_TASKS = '';
         this.gradedTasks.forEach(function(gtItem) {
-          GRADED_TASKS += '<li>' + gtItem.points + '->' +
+          GRADED_TASKS += '<li class="gradedTasks__item">' + gtItem.points + '->' +
                         gtItem.task.name + '->' + formatDate(new Date(gtItem.task.datetime)) + '</li>';
         });
         document.getElementById('content').innerHTML = eval('`' + responseText + '`');
