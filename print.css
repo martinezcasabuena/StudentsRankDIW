@@ -1,3 +1,18 @@
-.body {
-  /* display:none */
+
+.itemMid__rankingTable {
+  width: 100%
+}
+
+.header__button-menu {
+  display: none;
+}
+
+.header__titleFont {
+  font-size: 4em;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.itemNotification {
+  display: none;
 }
